@@ -9,9 +9,14 @@ Piszemy w C++
 Chwilowy podział pracy:
 * Francuz odczytywanie dzwieku
     - zwraca
+        ```
             vector<double> sound
+        ```
+
 * Glapa FFT etc
     - zwraca
+    ```
         vector<vector<double> >  FFTs
+    ```
 * Morawski, Bartosik wyświetlanie wykresów
 
