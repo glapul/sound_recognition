@@ -15,7 +15,7 @@ Na środę (na prezentację) robimy program, który czyta plik wav z dysku i wys
         ```
             vector<double> sound
         ```
-
+	//pozostało mi ogarnąć kod, a tak to CHYBA działa
 * Glapa FFT etc
     - zwraca
     ```
