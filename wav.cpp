@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 fstream file; //tutaj przechowujemy WAV
@@ -17,7 +18,7 @@ string ReadCharValue(int bytes){ //funkcja czytaj¹ca znaki z pliku WAV
 
 string dec2bin(int val){
 	string wyn;
-	
+
 	while(val>0){
 		if(val%2==0)wyn+="0";
 		else wyn+="1";
@@ -26,7 +27,7 @@ string dec2bin(int val){
 
 	while(wyn.size()<8)wyn+="0";
 	reverse(wyn.begin(),wyn.end());
-	
+
 	return wyn;
 }
 
