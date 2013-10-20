@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 #include "wav.h"
-=======
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 using namespace std;
->>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
 
 string wav::ReadCharValue(int bytes){ //funkcja czytaj¹ca znaki z pliku WAV
 	string RetValue="";
