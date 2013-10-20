@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 #include "wav.h"
+=======
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+using namespace std;
+>>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
 
 string wav::ReadCharValue(int bytes){ //funkcja czytaj¹ca znaki z pliku WAV
 	string RetValue="";
@@ -11,7 +20,7 @@ string wav::ReadCharValue(int bytes){ //funkcja czytaj¹ca znaki z pliku WAV
 
 string wav::dec2bin(int val){
 	string wyn;
-	
+
 	while(val>0){
 		if(val%2==0)wyn+="0";
 		else wyn+="1";
@@ -20,7 +29,7 @@ string wav::dec2bin(int val){
 
 	while(wyn.size()<8)wyn+="0";
 	reverse(wyn.begin(),wyn.end());
-	
+
 	return wyn;
 }
 
@@ -76,9 +85,14 @@ void wav::translate(){
 		double A=ReadIntValue(bits/8);
 		Trans.push_back(A);
 	}
+<<<<<<< HEAD
 }
 
 wav::wav(string FileName){
 	load(FileName);
 	translate();
 }
+=======
+	system("pause");
+}
+>>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
