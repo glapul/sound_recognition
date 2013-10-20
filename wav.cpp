@@ -95,4 +95,7 @@ wav::wav(string FileName){
 =======
 	system("pause");
 }
+<<<<<<< HEAD
+>>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
+=======
 >>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
