@@ -2,8 +2,8 @@
 #include<complex>
 using namespace std;
 
-const int SMPLS_PR_BLCK = 1<<11;
-const int SMLL_BLCK = 1<<7;
+const int SMPLS_PR_BLCK = 1<<15;
+const int SMLL_BLCK = 1<<9;
 const  double INF= 2000000000;
 
 
