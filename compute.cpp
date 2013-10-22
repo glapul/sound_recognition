@@ -1,17 +1,10 @@
 #include<vector>
-#include<complex>
-using namespace std;
-
-const int SMPLS_PR_BLCK = 1<<15;
-const int SMLL_BLCK = 1<<9;
-const  double INF= 2000000000;
-
-
-
-#include<vector>
-#include<complex>
 #include<cmath>
+#include<complex>
 using namespace std;
+const int SMPLS_PR_BLCK = 1<<15; // rozmiar fragmentu, ktorego FFT liczymy - 2^15 to okolo 0.8s
+const int SMLL_BLCK = 1<<9; //rozmiar wynikowego vectora z FFT tych 0.8s
+const  double INF= 2000000000;
 struct FFT
 {
     vector<complex<double> > org, res, tmp,e;
@@ -94,6 +87,14 @@ vector<double> transform (vector<double> t)
                 tmp += t[i+j];
         res.push_back(tmp);
     }
+    for(int i=0;i<res.size();i++)
+        if(res[i]<0)
+            res[i]*=-1;
+    int mx=0;
+    for(int i=0;i<res.size();i++)
+        mx = max(mx,res[i]);
+    for(int i=0;i<res.size();i++)
+        res[i]*=100.0/mx;
     return res;
 }
 
