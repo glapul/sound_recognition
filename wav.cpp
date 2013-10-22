@@ -1,5 +1,6 @@
 #include "wav.h"
 
+
 string wav::ReadCharValue(int bytes){ //funkcja czytaj¹ca znaki z pliku WAV
 	string RetValue="";
 
@@ -11,7 +12,7 @@ string wav::ReadCharValue(int bytes){ //funkcja czytaj¹ca znaki z pliku WAV
 
 string wav::dec2bin(int val){
 	string wyn;
-	
+
 	while(val>0){
 		if(val%2==0)wyn+="0";
 		else wyn+="1";
@@ -20,7 +21,7 @@ string wav::dec2bin(int val){
 
 	while(wyn.size()<8)wyn+="0";
 	reverse(wyn.begin(),wyn.end());
-	
+
 	return wyn;
 }
 
@@ -53,7 +54,11 @@ long long wav::ReadIntValue(int bytes){ //funkcja czytajaca z pliku WAV wartosci
 }
 
 void wav::load(string FileName){
-	file.open(FileName,fstream::in |fstream::binary);
+    char *s  = new char[FileName.size()+1];
+    for(int i=0;i<FileName.size();i++)
+        s[i]=FileName[i];
+    s[FileName.size()]=0;
+	file.open(s,fstream::in |fstream::binary);
 }
 
 void wav::translate(){

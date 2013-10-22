@@ -5,6 +5,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include<algorithm>
 using namespace std;
 
 struct wav{
@@ -20,7 +21,7 @@ struct wav{
 
 	long long bin2dec(string Bin);
 	string dec2bin(int Dec);
-	
+
 };
 
 #endif
