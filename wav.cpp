@@ -59,7 +59,7 @@ long long wav::ReadIntValue(int bytes){ //funkcja czytajaca z pliku WAV wartosci
 }
 
 void wav::load(string FileName){
-	file.open(FileName, std::ios::in | std::ios::out );
+	file.open(FileName, std::ios::in | std::ios::binary);
 }
 
 void wav::translate(){
@@ -82,17 +82,14 @@ void wav::translate(){
 		double A=ReadIntValue(bits/8);
 		Trans.push_back(A);
 	}
-<<<<<<< HEAD
+
 }
 
 wav::wav(string FileName){
 	load(FileName);
 	translate();
 }
-=======
+
 	system("pause");
 }
-<<<<<<< HEAD
->>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
-=======
->>>>>>> a3e9fb821e4cad84cf308543f4e22bdcb1ae6656
+
