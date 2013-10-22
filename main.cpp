@@ -1,13 +1,13 @@
 #include<cstdio>
 #include<vector>
 #include<cmath>
+//#include "wav.h"
 #include "compute.h"
-#include "wav.h"
 using namespace std;
 
 int main()
 {
-	wav Plik("test2.wav");
+//	wav Plik("test2.wav");
     vector<double> ssin;
     for(int i=0;i<1<<20;i++)
         ssin.push_back(sin((double)i/128));
