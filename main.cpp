@@ -1,17 +1,15 @@
 #include<cstdio>
 #include<vector>
 #include<cmath>
-//#include "wav.h"
+#include "wav.h"
 #include "compute.h"
 using namespace std;
 
 int main()
 {
-//	wav Plik("test2.wav");
-    vector<double> ssin;
-    for(int i=0;i<1<<20;i++)
-        ssin.push_back(sin((double)i/128));
-    vector<vector<double> > tmp = compute(ssin);
+	wav Plik("test2.wav");
+	
+    vector<vector<double> > tmp = compute(Plik.Trans);
     for(int i=0;i<tmp.size();i++)
     {
         for(int j=0;j<tmp[i].size();j++)
